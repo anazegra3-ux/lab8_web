@@ -1,0 +1,39 @@
+:root {
+  --color-bg: #fff8f8;
+  --color-text: #333;
+  --color-border: #ff5a4a;
+  --color-surface: #fff;
+  --gap: 0.75rem;
+  --radius: 0.25rem;
+  --sidebar-width: 9rem;
+  --ads-width: 9rem;
+  --block-min-height: 3rem;
+}
+
+body {
+  font-family: Poppins, Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.page {
+  padding: var(--gap);
+  min-height: 100vh;
+}
+
+.block {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  min-height: var(--block-min-height);
+}
+
+.block--main {
+  min-height: 16rem;
+}
+
+.block--sidebar {
+  min-height: 6rem;
+}

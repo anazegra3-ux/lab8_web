@@ -1,0 +1,84 @@
+/* Спосіб 1: column grids + rows (mobile-first) */
+
+/* Мобільний: одна колонка, блоки йдуть у порядку DOM */
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+/* Планшет */
+@media (min-width: 768px) {
+  .page {
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .block--header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .block--nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .block--sidebar {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .block--main {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .block--ads {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .block--footer {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1024px) {
+  .page {
+    grid-template-columns: var(--sidebar-width) 1fr var(--ads-width);
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .block--header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .block--sidebar {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  .block--nav {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .block--main {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .block--ads {
+    grid-column: 3;
+    grid-row: 2 / 4;
+  }
+
+  .block--footer {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+}

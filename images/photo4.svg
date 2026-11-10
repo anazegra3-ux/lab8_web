@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9e8b0"/><stop offset="1" stop-color="#4b6b3a"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#g)"/>
+<circle cx="706" cy="169" r="75" fill="#fff" opacity=".75"/>
+<path d="M0 560 Q 250 341 520 520 T 1200 492 V800 H0Z" fill="#4b6b3a" opacity=".85"/>
+<path d="M0 680 Q 300 549 640 660 T 1200 640 V800 H0Z" fill="#000" opacity=".25"/>
+<text x="60" y="760" font-family="sans-serif" font-size="56" fill="#fff" opacity=".9">Photo 4</text></svg>

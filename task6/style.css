@@ -1,0 +1,77 @@
+:root {
+  --color-bg: #fff;
+  --color-block: #ffd940;
+  --color-block-text: #fff;
+  --gap: 0.3rem;
+  --row-height: 3.2rem;
+  --font-size: 2rem;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: var(--color-bg);
+}
+
+/* Парний варіант: 12 колонок, нумерація через generated content */
+.tree {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+  max-width: 62rem;
+  margin: 1rem auto;
+  padding-inline: 0.5rem;
+  counter-reset: block;
+}
+
+.tree__block {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-block);
+  counter-increment: block;
+}
+
+.tree__block::before {
+  content: counter(block);
+  font-size: var(--font-size);
+  color: var(--color-block-text);
+}
+
+.tree__block--span-12 {
+  grid-column: span 12;
+}
+
+.tree__block--span-6 {
+  grid-column: span 6;
+}
+
+.tree__block--span-4 {
+  grid-column: span 4;
+}
+
+.tree__block--span-3 {
+  grid-column: span 3;
+}
+
+.tree__block--span-2 {
+  grid-column: span 2;
+}
+
+.tree__block--span-1 {
+  grid-column: span 1;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --row-height: 2.6rem;
+    --font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --row-height: 2.2rem;
+    --font-size: 0.9rem;
+    --gap: 0.2rem;
+  }
+}
